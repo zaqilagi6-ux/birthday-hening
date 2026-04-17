@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Happy Birthday, Hening Laila Sofa Atsalisa! 🎂</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body {
+            min-height: 100vh;
+            background: linear-gradient(145deg, #ffdde1 0%, #ee9ca7 100%);
+            font-family: 'Poppins', -apple-system, 'Segoe UI', 'Comic Neue', cursive, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        /* Efek partikel floating */
+        .sparkle {
+            position: absolute;
+            background: rgba(255, 235, 150, 0.9);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: floatUp 5s linear forwards;
+            z-index: 0;
+        }
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-700px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 48px 48px 60px 60px;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), 0 0 0 8px #ffb7c5, 0 0 0 12px #fff3e0;
+            max-width: 500px;
+            width: 100%;
+            padding: 20px 18px 35px;
+            text-align: center;
+            backdrop-filter: blur(2px);
+            z-index: 10;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .profile-icon {
+            font-size: 64px;
+            background: #ffd0d8;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: -55px auto 12px;
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+            border: 4px solid white;
+        }
+        h1 {
+            font-size: 1.8rem;
+            color: #c43a5e;
+            margin-top: 8px;
+            letter-spacing: -0.3px;
+            text-shadow: 1px 1px 0 #ffe0e7;
+        }
+        .fullname {
+            font-size: 1.35rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #e66767, #c43a5e);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 16px;
+            padding: 0 5px;
+            word-break: break-word;
+        }
+        .birthday-greeting {
+            font-size: 1rem;
+            margin: 12px 0;
+            color: #444;
+            background: #fff0f3;
+            padding: 10px 16px;
+            border-radius: 40px;
+            display: inline-block;
+        }
+        .message {
+            font-size: 0.95rem;
+            line-height: 1.55;
+            color: #2c3e2f;
+            background: #fef7e0;
+            padding: 18px;
+            border-radius: 36px;
+            margin: 18px 0;
+            text-align: left;
+            box-shadow: inset 0 0 0 2px #ffe2b5, 0 6px 12px rgba(0, 0, 0, 0.05);
+        }
+        .cake-area {
+            margin: 16px 0;
+        }
+        .cake {
+            cursor: pointer;
+            transition: transform 0.1s ease;
+            display: inline-block;
+            padding: 10px 20px;
+            background: #fff2f5;
+            border-radius: 80px;
+        }
+        .cake:active {
+            transform: scale(0.96);
+        }
+        .lilin {
+            font-size: 36px;
+            filter: drop-shadow(0 3px 5px rgba(0,0,0,0.2));
+            display: inline-block;
+        }
+        .countdown-text {
+            font-weight: bold;
+            background: #f7c5d1;
+            padding: 10px 12px;
+            border-radius: 50px;
+            margin-top: 16px;
+            color: #8b2c46;
+            font-size: 0.9rem;
+        }
+        button {
+            background: #ff8aa2;
+            border: none;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 12px 20px;
+            border-radius: 50px;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: 0.1s;
+            box-shadow: 0 4px 0 #a13e57;
+            width: 80%;
+            max-width: 260px;
+        }
+        button:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #a13e57;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 22px;
+            flex-wrap: wrap;
+        }
+        .gift-emoji {
+            font-size: 34px;
+            background: white;
+            border-radius: 60px;
+            padding: 8px 18px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.1s;
+            cursor: pointer;
+        }
+        .gift-emoji:active {
+            transform: scale(0.92);
+            background: #fff1f3;
+        }
+        footer {
+            margin-top: 25px;
+            font-size: 0.7rem;
+            color: #b97f8b;
+        }
+        /* Untuk HP kecil */
+        @media (max-width: 450px) {
+            body {
+                padding: 12px;
+            }
+            .card {
+                padding: 18px 14px 28px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .fullname {
+                font-size: 1.2rem;
+            }
+            .message {
+                font-size: 0.88rem;
+                padding: 15px;
+            }
+            .gift-emoji {
+                font-size: 28px;
+                padding: 6px 14px;
+            }
+            button {
+                font-size: 1rem;
+                padding: 10px 16px;
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <div class="profile-icon">
+        🎀🎂
+    </div>
+    <h1>✨ Selamat Ulang Tahun! ✨</h1>
+    <div class="fullname">
+        Hening Laila Sofa Atsalisa
+    </div>
+    <div class="birthday-greeting">
+        🎉🥳  Special Day Special You 🥳🎉
+    </div>
+    <div class="message">
+        🌷 <strong>Untuk Hening Laila Sofa Atsalisa</strong> 🌷<br><br>
+        Hari ini adalah hari yang begitu indah, karena di hari inilah seseorang yang luar biasa lahir ke dunia.<br><br>
+        💖 Semoga di usia yang baru ini, kamu selalu dikelilingi kebahagiaan, cinta, dan tawa. Semua impianmu perlahan menjadi nyata.<br><br>
+        🎂 Jangan lupa tersenyum, karena senyummu adalah hadiah terbaik!<br><br>
+        <span style="display:block; text-align:center;">💝 Happy Birthday, Sayang! 💝</span>
+    </div>
+    <div class="cake-area">
+        <div class="cake" id="cakeClick">
+            <span class="lilin" id="candle">🕯️</span><br>
+            🎂🍰🎂
+        </div>
+        <div id="cakeMessage" style="font-size: 0.85rem; margin-top: 8px; color:#cc6b7e; min-height: 45px;"></div>
+    </div>
+    <div class="countdown-text" id="countdownBox">
+        🎈 Ketuk kue untuk meniup lilin! 🎈
+    </div>
+    <button id="surpriseBtn">🎁 Buka Kejutan Spesial 🎁</button>
+    <div class="gallery">
+        <div class="gift-emoji">🌸</div>
+        <div class="gift-emoji">🎀</div>
+        <div class="gift-emoji">💐</div>
+        <div class="gift-emoji">⭐</div>
+    </div>
+    <footer>
+        💌 dari seseorang yang selalu mendoakanmu 💌
+    </footer>
+</div>
+<script>
+    // Efek partikel (kembang api mini)
+    function createSparkle() {
+        const spark = document.createElement('div');
+        spark.classList.add('sparkle');
+        const size = Math.random() * 10 + 4;
+        spark.style.width = size + 'px';
+        spark.style.height = size + 'px';
+        spark.style.left = Math.random() * window.innerWidth + 'px';
+        spark.style.top = window.innerHeight + 5 + 'px';
+        spark.style.background = `hsl(${Math.random() * 60 + 20}, 85%, 65%)`;
+        spark.style.boxShadow = '0 0 6px gold';
+        document.body.appendChild(spark);
+        setTimeout(() => {
+            if(spark && spark.remove) spark.remove();
+        }, 5000);
+    }
+    setInterval(createSparkle, 600);
+    // Logika lilin (klik kue)
+    let candleLit = true;
+    const candleElement = document.getElementById('candle');
+    const cakeDiv = document.getElementById('cakeClick');
+    const cakeMessageDiv = document.getElementById('cakeMessage');
+    const countdownBox = document.getElementById('countdownBox');
+    function blowCandle() {
+        if (candleLit) {
+            candleElement.innerHTML = '💨✨';
+            candleLit = false;
+            cakeMessageDiv.innerHTML = '🎉 Selamat! Lilin padam, wujudkan harapanmu! 🎉';
+            countdownBox.innerHTML = '🎂✨ Selamat Ulang Tahun, Hening! ✨🎂';
+            // Efek confetti tambahan
+            for(let i = 0; i < 35; i++) {
+                setTimeout(() => createSparkle(), i * 30);
+            }
+        } else {
+            cakeMessageDiv.innerHTML = '🍰 Lilin sudah padam... saatnya potong kue! 🍰';
+        }
+    }
+    cakeDiv.addEventListener('click', blowCandle);
+    // Untuk sentuhan di HP lebih responsif
+    cakeDiv.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        blowCandle();
+    });
+    // Tombol kejutan spesial
+    const surpriseBtn = document.getElementById('surpriseBtn');
+    surpriseBtn.addEventListener('click', () => {
+        const surpriseDiv = document.createElement('div');
+        surpriseDiv.style.position = 'fixed';
+        surpriseDiv.style.top = '50%';
+        surpriseDiv.style.left = '50%';
+        surpriseDiv.style.transform = 'translate(-50%, -50%)';
+        surpriseDiv.style.backgroundColor = '#fff6e8';
+        surpriseDiv.style.padding = '22px 24px';
+        surpriseDiv.style.borderRadius = '60px';
+        surpriseDiv.style.boxShadow = '0 20px 35px rgba(0,0,0,0.3), 0 0 0 8px #ffb7c5';
+        surpriseDiv.style.zIndex = '1000';
+        surpriseDiv.style.textAlign = 'center';
+        surpriseDiv.style.fontFamily = 'inherit';
+        surpriseDiv.style.maxWidth = '85%';
+        surpriseDiv.style.width = '320px';
+        surpriseDiv.innerHTML = `
+            <div style="font-size: 55px;">🎁💖🎁</div>
+            <h2 style="color:#c43a5e; font-size:1.5rem; margin:10px 0;">Kejutan Spesial!</h2>
+            <p style="font-size:1rem; margin:12px 0;">Untuk <strong>Hening Laila Sofa Atsalisa</strong><br>
+            Semoga hari-harimu selalu cerah! 🌟<br>
+            Kamu luar biasa dan sangat berarti.</p>
+            <p>💝 Terima kasih telah menjadi dirimu 💝</p>
+            <button id="closeSurprise" style="background:#ff8aa2; margin-top:12px; width:auto; padding:8px 22px;">Tutup</button>
+        `;
+        document.body.appendChild(surpriseDiv);
+        for (let i=0;i<45;i++) {
+            setTimeout(() => createSparkle(), i*25);
+        }
+        const closeBtn = surpriseDiv.querySelector('#closeSurprise');
+        closeBtn.addEventListener('click', () => {
+            surpriseDiv.remove();
+        });
+        closeBtn.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            surpriseDiv.remove();
+        });
+    });
+    // Galeri ucapan untuk HP (klik/tap)
+    const giftEmojis = document.querySelectorAll('.gift-emoji');
+    const messages = [
+        "🌸 Semoga selalu sehat & ceria! 🌸",
+        "🎀 Sukses selalu & bahagia terus! 🎀",
+        "💐 Kamu istimewa, jangan pernah ragu! 💐",
+        "⭐ Semoga mimpi-mimpimu terwujud semua ⭐"
+    ];
+    giftEmojis.forEach((emoji, idx) => {
+        emoji.addEventListener('click', () => {
+            alert(messages[idx % messages.length]);
+        });
+        emoji.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            alert(messages[idx % messages.length]);
+        });
+    });
+    // Efek getar ringan jika didukung (optional)
+    if ('vibrate' in navigator) {
+        cakeDiv.addEventListener('click', () => {
+            navigator.vibrate(50);
+        });
+        surpriseBtn.addEventListener('click', () => {
+            navigator.vibrate(30);
+        });
+    }
+    console.log("🎂 Happy Birthday Hening Laila Sofa Atsalisa! 🎂");
+</script>
+</body>
+</html>
